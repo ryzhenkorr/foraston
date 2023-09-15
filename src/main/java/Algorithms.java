@@ -109,15 +109,16 @@ public class Algorithms extends JFrame {
                 for (int i = 0; i < array.length; i++) {
                     if (!isDigit(array[i])) {
                         console.append("Массив введен неверно!\n");
+                        result = null;
                         break;
                     }
                     if (Double.parseDouble(array[i]) % 3 == 0.0) {
                         result += array[i] + " ";
                     }
                 }
-                if (result.equals("")) {
+                if (result == "") {
                     console.append("Нет элементов, кратных 3.\n");
-                } else {
+                } else if (result != null) {
                     console.append("Результат. Элементы массива, кратные 3 это: " + result + "\n");
                 }
             }
